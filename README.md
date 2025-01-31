@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# 📘 Gestión de Reservas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web para gestionar reservas de habitaciones en un hotel, permitiendo administrar clientes, habitaciones y reservas con validaciones integradas.
 
-Currently, two official plugins are available:
+Integrantes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-Carlos Bautista
+-Cinthya Guzman
+-Bryan Jumbo
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Instalación y Ejecución
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1️⃣ Clonar el repositorio
+```bash
+git clone https://github.com/cabautista90/Gestion_Habitaciones_Clientes.git
+cd gestion-reservas
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2️⃣ Instalar dependencias
+```bash
+npm install
 ```
+
+### 3️⃣ Ejecutar la aplicación
+```bash
+npm start
+```
+Esto iniciará un servidor de desarrollo en `http://localhost:3000`.
+
+---
+
+## 🛠 Funcionalidades Implementadas
+
+### 📌 Gestión de Clientes
+- Agregar nuevos clientes con validación de correo y nombre.
+- Editar y eliminar clientes.
+- Persistencia de datos con `localStorage`.
+
+### 📌 Gestión de Habitaciones
+- Listado de habitaciones con tipo y precio.
+- Agregar nuevas habitaciones y tipos personalizados.
+- Editar y eliminar habitaciones.
+
+### 📌 Gestión de Reservas
+- Crear reservas seleccionando un cliente, una habitación y un rango de fechas.
+- Validación de fechas para evitar solapamientos en habitaciones reservadas.
+- Editar y eliminar reservas.
+
+---
+
+## 📄 Notas
+- La aplicación almacena los datos en `localStorage`.
+- Se recomienda utilizar un backend para almacenamiento persistente en producción.
+
+---
+
+## 📜 Licencia
+Este proyecto está bajo la licencia MIT.
+
+---
+
+## 🤝 Contribuciones
+Las contribuciones son bienvenidas. ¡Siéntete libre de abrir un issue o pull request!
+
